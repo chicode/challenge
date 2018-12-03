@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TOP SECRET</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+</head>
+<body>
+    <marquee scrolldelay="10" scrollamount="25" id="warning">WARNING TOP SECRET IF YOU NAVIGATED TO THIS PAGE ACCIDENTALLY DESTROY YOUR DEVICE IMMEDIATELY</marquee>
+    <div id="flex-fucker">
+        <input placeholder="username">
+        <input placeholder="password">
+        <a href="done" id="submit">submit</a>
+    </div>
+    <style>
+    :root {
+        --green: green;
+    }
+    * {
+        background: black;
+        font-family: VT323;
+    }
+
+    body, input {
+        font-size: 10rem;
+    }
+
+    input {
+        border: 3px solid var(--green);
+        background: black;
+        width: 900px;
+        height: 100px;
+        color: white;
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    #warning {
+        color: var(--green);
+        font-size: 15rem;
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+    }
+
+    #flex-fucker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    </style>
+    <script>
+    let i = true
+    setInterval(() => {
+        document.querySelector('#warning').style.color = i ? 'red' : 'green'
+        i = !i
+    }, 100)
+    </script>
+</body>
+</html>

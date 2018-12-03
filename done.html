@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TOP SECRET</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+</head>
+<body>
+    <marquee scrolldelay="10" scrollamount="100" id="warning">WELCOME HACKER</marquee>
+    <style>
+    :root {
+        --green: green;
+    }
+    * {
+        background: black;
+        font-family: VT323;
+    }
+
+    body, input {
+        font-size: 5rem;
+    }
+
+    input {
+        border: 3px solid var(--green);
+        background: black;
+        width: 600px;
+        height: 50px;
+        color: white;
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    #warning {
+        color: var(--green);
+        font-size: 10rem;
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+    }
+
+    #flex-fucker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    </style>
+    <script>
+    let i = true
+    setInterval(() => {
+        document.querySelector('#warning').style.color = i ? 'red' : 'green'
+        i = !i
+    }, 100)
+    </script>
+</body>
+</html>

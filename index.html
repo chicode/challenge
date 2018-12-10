@@ -8,9 +8,9 @@
 <body>
     <marquee scrolldelay="10" scrollamount="25" id="warning">WARNING TOP SECRET IF YOU NAVIGATED TO THIS PAGE ACCIDENTALLY DESTROY YOUR DEVICE IMMEDIATELY</marquee>
     <div id="flex-fucker">
-        <input placeholder="username">
-        <input placeholder="password">
-        <a href="done" id="submit">submit</a>
+        <input id="username" placeholder="username">
+        <input id="password" placeholder="password">
+        <div id="submit" onclick="submit()">submit</div>
     </div>
     <style>
     :root {
@@ -47,6 +47,9 @@
         flex-direction: column;
         align-items: center;
     }
+    #submit {
+      background-color:green;
+    }
     </style>
     <script>
     let i = true
@@ -54,6 +57,12 @@
         document.querySelector('#warning').style.color = i ? 'red' : 'green'
         i = !i
     }, 100)
+
+    function submit() {
+      if ((document.getElementById('username').value === "shit") && (document.getElementById('password').value === "othershit")) {
+        window.location.href = 'done.html'
+      }
+    }
     </script>
 </body>
 </html>

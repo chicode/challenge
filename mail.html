@@ -18,7 +18,7 @@
         </div>
         </div>
       <div class="email">
-        <h2> ASdfgERWQFASFKASFGJEWKFJSADFASDFASE</h2>
+        <h1> ASdfgERWQFASFKASFGJEWKFJSADFASDFASE</h1>
         <p> AJSKDFEJRHFGNLAXD VLASJGJL RJGLERGJE GELRJK GLEJLADSFGLAERGASFG ASDFG ASDF ASDF QWEF LJKQSLA GSAS FGJL ASDGALKSDG ASDKLG ASDKFL SAKLDF SD FKLAERFRJALJRG LG JARJG J GJRA LGJEDRGR G   J      KGEL GAJEJL GJ A  AJ EGJL AJ E</p>
         <p> AJSKDFEJRHFGNLAXD VLASJGJL RJGLERGJE GELRJK GLEJLADSFGLAERGASFG ASDFG ASDF ASDF QWEF LJKQSLA GSAS FGJL ASDGALKSDG ASDKLG ASDKFL SAKLDF SD FKLAERFRJALJRG LG JARJG J GJRA LGJEDRGR G   J      KGEL GAJEJL GJ A  AJ EGJL AJ E</p>
         <p> AJSKDFEJRHFGNLAXD VLASJGJL RJGLERGJE GELRJK GLEJLADSFGLAERGASFG ASDFG ASDF ASDF QWEF LJKQSLA GSAS FGJL ASDGALKSDG ASDKLG ASDKFL SAKLDF SD FKLAERFRJALJRG LG JARJG J GJRA LGJEDRGR G   J      KGEL GAJEJL GJ A  AJ EGJL AJ E</p>
@@ -100,11 +100,13 @@
 
     </style>
     <script>
+    let emailsJson;
     fetch('./emails.json')
     .then((response) => {
       return response.json()
     })
     .then((emails) => {
+      emailsJson = emails
       console.log(emails)
        
       emails.emails.map((email, index) => {
@@ -122,7 +124,12 @@
     })
 
     function setEmail(email) {
-    
+      let emailhtml = ` 
+        <h1>${emails.emails[email].header}</h1>
+        <p>${emails.emails[email].email}</p>
+      `
+
+
     }
     </script>
 </body>
